@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >-->
+<suite name="Suite1"> 
+  <listeners> 
+    <!-- <listener class-name="com.vimalselvam.testng.listener.ExtentTestNgFormatter" /> 这是ExtentReport原监听器-->  
+    <listener class-name="com.auto.util.TestngListener"/> 
+  </listeners>  
+  <parameter name="url" value="https://www.linkedsign.cn/"/>
+  <parameter name="loginName" value="13688888888"/>
+  <parameter name="password" value="aaa888888"/>
+  <test name="test1">
+    <classes>
+      <class name="com.auto.service.TestLogin"/>
+      <class name="com.auto.service.TestAddGoods">
+        <methods>
+          <include name="testCaseAddOther"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

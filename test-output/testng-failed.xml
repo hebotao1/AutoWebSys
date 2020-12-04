@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]">
+  <parameter name="password" value="aaa888888"/>
+  <parameter name="loginName" value="13666666666"/>
+  <parameter name="url" value="http://193.112.201.116:4399/login"/>
+  <test name="test1(failed)">
+    <classes>
+      <class name="com.auto.service.TestLogin">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="testCaseLogin"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- com.auto.service.TestLogin -->
+      <class name="com.auto.service.TestAddGoods">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="testCaseNewAddOther"/>
+        </methods>
+      </class> <!-- com.auto.service.TestAddGoods -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

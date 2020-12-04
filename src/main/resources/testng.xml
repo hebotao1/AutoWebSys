@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >-->
+<suite name="Suite1">
+
+    <parameter name="url"  value="http://193.112.201.116:4399/login"/>
+    <parameter name="loginName"  value="13666666666"/>
+    <parameter name="password"  value="aaa888888"/>
+
+
+<!--    <groups>-->
+<!--           <run>-->
+<!--              <include name="A" />-->
+<!--               <exclude name="B" />-->
+<!--            </run>-->
+<!--    </groups>-->
+
+    <test name="test1">
+        <classes >
+            <class name="com.auto.service.TestLogin"/>
+            <class name="com.auto.service.TestAddGoods">
+                <methods>
+<!--                    <include name="testCaseAddHotel" />-->
+<!--                    <include name="testCaseAddOther" />-->
+<!--                    <include name="testCaseAddTravel" />-->
+                        <include name="testCaseNewAddOther" />
+
+                </methods>
+            </class>
+<!--            <class name="com.auto.service.TestGoodsOperation">-->
+<!--                <methods>-->
+
+<!--                    <include name="testCaseGoodsOtUp" />-->
+<!--                    <include name="testCaseGoodsDown" />-->
+<!--                    <include name="testCaseGoodsDel" />-->
+
+<!--                </methods>-->
+<!--            </class>-->
+        </classes>
+    </test>
+
+
+
+
+
+</suite>
