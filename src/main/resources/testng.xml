@@ -9,8 +9,8 @@
 
 <!--    <groups>-->
 <!--           <run>-->
-<!--              <include name="A" />-->
-<!--               <exclude name="B" />-->
+<!--              <include name="A" />-->   <!-- -->
+<!--               <exclude name="B" />-->  <!--排除组-->
 <!--            </run>-->
 <!--    </groups>-->
 

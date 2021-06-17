@@ -30,7 +30,7 @@ public class TestLogin extends AbstractTestNGSpringContextTests  {
 //    public void beforeMethod() {
 //    }
 
-    @Parameters({"url","loginName","password"})
+    @Parameters({"url","loginName","p   assword"})
     @Test
     public void testCaseLogin(String url ,String loginName,String password) {
 

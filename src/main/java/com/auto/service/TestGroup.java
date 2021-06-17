@@ -5,7 +5,7 @@ import org.testng.annotations.*;
 
 public class TestGroup {
 
-    @Test
+    @Test(groups = {"test11"})
     public void testCase1() {
         System.out.println("in test case 1");
     }

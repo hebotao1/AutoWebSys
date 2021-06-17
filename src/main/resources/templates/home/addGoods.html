@@ -67,7 +67,7 @@
             <div class="layui-inline">
                 <label class="layui-form-label">新增产品</label>
                 <div class="layui-input-block">
-                    <input type="checkbox" name="hotelProduct" title="酒店产品" checked="">
+                    <input type="checkbox" name="hotelProduct" title="酒店产品" >
                 </div>
             </div>
             <div class="layui-inline">
@@ -97,7 +97,7 @@
                 <div  class="layui-form-item" style="text-align: center;">
                     <div class="layui-input-block">
                         <button type="submit" class="layui-btn" lay-submit="" lay-filter="loginInfo">立即提交</button>
-                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        <button type="submit" class="layui-btn layui-btn-primary" lay-filter="testRest">重置</button>
                     </div>
                 </div>
 
@@ -181,7 +181,7 @@
         var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
         form.val('good_info',{
             'loginUrl': 'http://193.112.201.116:4399/login',
-            'loginName':"13666666666",
+            'loginName':"13688888888",
             'loginPassword':"aaa888888",
             'trivalNum':"1",
             'hotelNum':"1",
@@ -196,7 +196,25 @@
 
         });
 
+        //监听提交
+        form.on('submit(testRest)', function(data){
 
+            $.ajax({
+                url:"/index/reset",
+                async: false,
+                type:"POST",
+                contentType: "application/json;charset=utf-8",
+                dataType: "text",
+                data:JSON.stringify(data.field),
+                success: function(data){
+
+                    console.log(data);
+
+                }
+            })
+            return false;
+
+        });
         //监听提交
         form.on('submit(loginInfo)', function(data){
 

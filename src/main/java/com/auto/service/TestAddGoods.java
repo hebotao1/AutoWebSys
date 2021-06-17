@@ -280,7 +280,6 @@ public class TestAddGoods extends AbstractTestNGSpringContextTests {
                     }
 
                 }else{
-
                     //点击二级规格组
                     Thread.sleep(1000);
                     goodsEle.clickAppSpecifications("//div[@class='fullscreen']//ul[@class='contntList']//li[@class='add']",0);
@@ -397,7 +396,7 @@ public class TestAddGoods extends AbstractTestNGSpringContextTests {
 
 
     @Test(groups = {"Travel"})
-    public void testCaseAddTravel() {
+        public void testCaseAddTravel() {
 
         try {
 

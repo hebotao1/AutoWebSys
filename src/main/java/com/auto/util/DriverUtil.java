@@ -42,6 +42,15 @@ public class DriverUtil{
     }
 
 
+    public  static void colseWindow(WebDriver driver){
+
+        driver.close();
+        driver.quit();
+
+    }
+
+
+
     public static void main(String[] args) {
         DriverUtil.getDriver();
         DriverUtil.openWindow("http://118.89.40.223/login");

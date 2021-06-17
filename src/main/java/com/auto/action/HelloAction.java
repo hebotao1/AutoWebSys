@@ -3,6 +3,7 @@ package com.auto.action;
 
 import com.auto.action.pojo.GoodsPage;
 import com.auto.handle.UseLoginEle;
+import com.auto.service.ThreadMethod;
 import com.auto.util.DriverUtil;
 import com.auto.util.GetPathUtil;
 import com.auto.util.ModifyXmlFile;
@@ -25,6 +26,8 @@ public class HelloAction {
     @Autowired
     public UseLoginEle useLoginEle;
 
+    @Autowired
+    public ThreadMethod threadMethod;
 
 
     @RequestMapping("/index")
@@ -89,6 +92,13 @@ public class HelloAction {
         return "Succsuss";
     }
 
+    @RequestMapping("/reset")
+    @ResponseBody
+    public String clickButtenReset (){
+        threadMethod.sendXml();
+//        setTestXml3();
+        return "Succsuss";
+    }
 
     public static void  setXml(){
         TestNG testNG = new TestNG();
@@ -107,6 +117,24 @@ public class HelloAction {
         testNG.run();
     }
 
+
+
+    public static void  setTestXml3(){
+        TestNG testNG = new TestNG();
+        List<String> suites = new ArrayList<String>();
+        //获取静态地址
+        String path1 = GetPathUtil.getResourcesPath("testng3.xml");
+//       String path1 =  Thread.currentThread().getContextClassLoader().getResource("testng.xml").getPath();
+        System.out.println(path1);
+
+
+//        suites.add(".\\src\\main\\resources\\testng.xml");
+
+        suites.add(path1);
+
+        testNG.setTestSuites(suites);
+        testNG.run();
+    }
     // 登录流程
 
 //    @RequestMapping("testlogin")
